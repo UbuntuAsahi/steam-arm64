@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# debian/rules for the Debian muvm package
+# Copyright © 2026 Andreas Schröder <andreas@kernelpanik.net>
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+# copy files to expected places
+override_dh_install:
+	install -Dpm0755 steam-arm64.sh debian/steam-arm64/usr/bin/steam-arm64
+	dh_install -a
+
+%:
+	dh $@

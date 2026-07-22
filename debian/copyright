@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: steam
+Source: https://github.com/UbuntuAsahi/steam-arm64
+
+Files: *
+Copyright: Ubuntu Asahi contributors
+License: MIT
+

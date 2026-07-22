@@ -1,0 +1,40 @@
+Source: steam-arm64
+Section: games
+Priority: optional
+Maintainer: Andreas Schröder <andreas@kernelpanik.net>
+Build-Depends:
+ debhelper-compat (= 13),
+ desktop-file-utils,
+ libappstream-glib8
+Rules-Requires-Root: no
+Vcs-Git: https://pagure.io/fedora-asahi/steam.git
+Vcs-Browser: https://pagure.io/fedora-asahi/steam
+Homepage: https://pagure.io/fedora-asahi/steam
+
+Package: steam-arm64
+Section: games
+Architecture: arm64
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ dbus-x11,
+ fex-emu-armv8.4,
+ hicolor-icon-theme,
+ lsb-release,
+ muvm,
+ python3,
+ x11-utils,
+ libvirglrenderer1,
+ zenity,
+ python3-pyqt6,
+ python3-pexpect,
+ python3-requests,
+ python3-xdg,
+ imagemagick,
+ libgtk2.0-bin,
+ ibus,
+ libvdpau1
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: steam-arm64
+ This package provides a wrapper to download, install and run Steam arm64 variant on Ubuntu Asahi.
