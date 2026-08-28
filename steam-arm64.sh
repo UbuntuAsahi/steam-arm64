@@ -76,22 +76,22 @@ EOF
 fi
 
 # GE-Proton11 already includes FEX and arm64 build of Proton
-if ! [ -e ~/.steam/steam/compatibilitytools.d/GE-Proton11-1-aarch64/ ]; then
-  echo Installing GE-Proton11-1-aarch64
+if ! [ -e ~/.steam/steam/compatibilitytools.d/GE-Proton11-5-aarch64/ ]; then
+  echo Installing GE-Proton11-5-aarch64
   mkdir -p ~/.steam/steam/compatibilitytools.d
 
   # skip download if file is already present
-  if ! [ -e ~/Downloads/GE-Proton11-1-aarch64.tar.gz ]; then
-    curl -o ~/Downloads/GE-Proton11-1-aarch64.tar.gz https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-1/GE-Proton11-1-aarch64.tar.gz
+  if ! [ -e ~/Downloads/GE-Proton11-5-aarch64.tar.gz ]; then
+    curl --follow -o ~/Downloads/GE-Proton11-5-aarch64.tar.gz https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-5/GE-Proton11-5-aarch64.tar.gz
   fi
-  tar -xf ~/Downloads/GE-Proton11-1-aarch64.tar.gz -C ~/.steam/steam/compatibilitytools.d/ 
+  tar -xf ~/Downloads/GE-Proton11-5-aarch64.tar.gz -C ~/.steam/steam/compatibilitytools.d/ 
 fi
 
 # Steam Runtime 4.0
 if ! [ -e "${STEAMROOT}/steamapps/appmanifest_4185400.acf" ]; then
   echo Installing Steam Runtime 4.0
   # workaround for compat dependency checker
-  sed -i 's#"4185400"#""#g' ~/.steam/steam/compatibilitytools.d/GE-Proton11-1-aarch64/toolmanifest.vdf
+  sed -i 's#"4185400"#""#g' ~/.steam/steam/compatibilitytools.d/GE-Proton11-5-aarch64/toolmanifest.vdf
   muvm --env=LD_LIBRARY_PATH="${STEAMROOT}/steamrtarm64/:${LD_LIBRARY_PATH}" ${STEAMROOT}/steamrtarm64/steam -noverifyfiles steam://install/4185400
 fi
 
