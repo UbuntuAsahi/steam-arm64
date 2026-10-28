@@ -1,11 +1,14 @@
-steam-arm64 (0.02-1asahi1.26.04) resolute; urgency=medium
+steam-arm64 (0.03-1asahi3.26.04) resolute; urgency=medium
+
+  * Upgrade GE-Proton from 11-5 to 11-11
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Tue, 27 Oct 2026 20:56:00 +0100
+
+steam-arm64 (0.02-1asahi2.26.04) resolute; urgency=medium
 
   * Upgrade GE-Proton from 11-1 to 11-5
-  * Includes ARM64X DXVK/VKD3D-Proton modules, updated FEX,
-    ARM64 Steam Runtime SDK, controller improvements, and
-    Easy Anti-Cheat fix
 
- -- Andreas Schröder <andreas@kernelpanik.net>  Sat, 22 Aug 2026 22:29:00 +0200
+ -- Andreas Schröder <andreas@kernelpanik.net>  Fri, 28 Aug 2026 23:32:00 +0200
 
 steam-arm64 (0.01-1asahi1.26.04) resolute; urgency=medium
 
